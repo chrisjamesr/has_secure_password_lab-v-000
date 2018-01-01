@@ -1,2 +1,9 @@
-<h1>Welcome#home</h1>
-<p>Find me in app/views/welcome/home.html.erb</p>
+<h1>Welcome <%= @user.name %></h1>
+
+<%#= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+    <%#= submit_tag "Log Out" %>
+    <%# end %>
+
+    <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+    <%= submit_tag "Log Out" %>
+    <% end %>
